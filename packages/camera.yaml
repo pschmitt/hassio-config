@@ -1,0 +1,48 @@
+android_ip_webcam:
+  # - host: z3c.lan
+  - host: 10.7.0.103
+    name: Z3C
+    username: !secret android_cam_z3c_username
+    password: !secret android_cam_z3c_password
+    motion_sensor: True
+
+camera:
+  - platform: foscam
+    name: Foscam C1
+    # ip: !secret foscam_c1_hostname
+    ip: 10.7.0.169
+    username: !secret foscam_c1_username
+    password: !secret foscam_c1_password
+
+  - platform: foscam
+    name: Foscam C2
+    # ip: !secret foscam_c2_hostname
+    ip: 10.7.0.164
+    username: !secret foscam_c2_username
+    password: !secret foscam_c2_password
+
+  - platform: mjpeg
+    name: octopi
+    # mjpeg_url: http://octopi.lan:8089/?action=stream
+    mjpeg_url: http://10.7.0.211:8089/?action=stream
+    authentication: basic
+    username: !secret cam_octopi_username
+    password: !secret cam_octopi_password
+
+  - platform: mjpeg
+    name: rfpi
+    # mjpeg_url: http://rfpi.lan:8089/?action=stream
+    mjpeg_url: http://10.7.0.163:8089/?action=stream
+    authentication: basic
+    username: !secret cam_rfpi_username
+    password: !secret cam_rfpi_password
+
+  - platform: mjpeg
+    name: winpi
+    # mjpeg_url: http://winpi.lan:8089/?action=stream
+    mjpeg_url: http://10.7.0.223:8089/?action=stream
+    authentication: basic
+    username: !secret cam_winpi_username
+    password: !secret cam_winpi_password
+
+# vim: set filetype=yaml et sw=2 ts=2 :
