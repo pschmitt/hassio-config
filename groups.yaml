@@ -1,0 +1,36 @@
+default_view:
+  name: Main
+  view: true
+  icon: mdi:home
+  entities:
+    - switch.wemo_insight__nasteanas
+    - group.all_lights
+
+
+cctv_living_room:
+  name: CCTV - Living Room
+  view: false
+  entities:
+    - camera.foscam_c1
+    - camera.octopi
+
+
+cctv_guest_room:
+  name: CCTV - Guest Room
+  view: false
+  entities:
+    - camera.rfpi
+    - camera.z3c
+
+
+cctv:
+  name: CCTV
+  view: true
+  icon: mdi:camera
+  entities:
+    - group.cctv_living_room
+    - camera.foscam_c2
+    - group.cctv_guest_room
+    - camera.winpi
+
+# vim: set filetype=yaml et sw=2 ts=2 :
