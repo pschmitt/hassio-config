@@ -6,6 +6,7 @@ homeassistant:
   unit_system: metric
   time_zone: Europe/Paris
   packages: !include_dir_named packages
+  customize: !include customize.yaml
 
 # Enables the frontend
 frontend:
@@ -56,3 +57,5 @@ tts:
 
 group: !include groups.yaml
 automation: !include automations.yaml
+
+# vim: set filetype=yaml et sw=2 ts=2 :
