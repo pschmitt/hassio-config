@@ -9,6 +9,9 @@ homeassistant:
 
 # Enables the frontend
 frontend:
+  themes:
+    backup:
+      primary-color: orangered
 
 # Enables configuration UI
 config:
